@@ -8,6 +8,13 @@ from pdb import set_trace as bp
 class GenerateFinalSummary:
     """
     The GenerateFinalSummary class is responsible for generating a final summary of the company based on the search results.
+
+    *** note ***
+    If you want to generate more detailed summaries, you will need to use a model that has a larger context window.
+    The current model only has a context window of 16385 tokens and max token output of 4096 tokens. 
+    This will limit the number of website extractions that can be added to the prompt as well as the amount of
+    detial the model can provide in it's response.
+    
     """
     def __init__(self):
         self.openai_client = OpenAI(api_key=os.environ.get("OPENAI_API_KEY"))
@@ -52,9 +59,9 @@ class GenerateFinalSummary:
         Search Results:"""
         
         extract_token_count = sum(len(self.tokenizer.encode(result)) for result in extract)
-        # Define maximum tokens for the model
+        # GPT-3.5 Turbo has a context window of 16385 tokens
         max_tokens = 16385
-        completion_tokens = 4000
+        completion_tokens = 4000 #  GPT-3.5 Turbo has a 4,096 max token output (round to be safe)
         available_tokens = max_tokens - completion_tokens
 
         extract_token_count = extract_token_count + len(self.tokenizer.encode(prompt))
