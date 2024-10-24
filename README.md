@@ -33,7 +33,7 @@ edges/conditional edges to determine the flow based on the results of each task.
 to automate the company research process, providing a structured and efficient approach to gathering
 and summarizing information.
 
-[alt text](https://github.com/[username]/[reponame]/blob/[branch]/image.jpg?raw=true)
+[LangGraph diagram](company_research_graph.pdf)
 
 ## Installation
 
