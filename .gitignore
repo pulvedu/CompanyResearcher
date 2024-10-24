@@ -29,6 +29,6 @@ company_researcher_errors.log
 .ipynb_checkpoints
 
 # PDFs
-*.pdf
+
 .DS_Store
 *.cfg
