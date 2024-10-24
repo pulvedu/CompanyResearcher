@@ -7,6 +7,7 @@ from agents.analyze_search import AnalyzeSearch
 from utils.state import State
 from agents.convert_to_pdf import ConvertToPDF
 import logging
+from IPython.display import Image
 
 # Configure errorlogging
 logging.basicConfig(
@@ -137,7 +138,13 @@ class CompanyResearcher:
                                         "search_results": [],
                                         "llm_answers": []},
                                         config={"recursion_limit": 50})
+    
+    # Generate a diagram of the graph
+    def generate_graph_diagram(self):
+        im = Image(self.company_researcher.get_graph(xray=True).draw_mermaid_png())
+        open('company_researcher_diagram.png', 'wb').write(im.data)
 
 if __name__ == "__main__":
-    response = CompanyResearcher().run()
+    response = CompanyResearcher()
+
 
