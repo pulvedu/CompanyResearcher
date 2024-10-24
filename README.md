@@ -71,6 +71,14 @@ To set up the project locally, follow these steps:
    ```bash
    pip install -r requirements.txt
    ```
+5. Configuration (API-KEYS)
+
+- You need to add API keys for both Tavily and OpenAI to a `.env` file in this repo
+- Ensure that your environment variables are set up correctly. You can configure them in a `.env` file,
+  which is ignored by version control as specified in the `.gitignore` file.
+1. Create a `.env` in `/CompanyResearcher/.env`
+2. In the file add on one line `TAVILY_API_KEY=<your-api-key>` and on another line `OPENAI_API_KEY=<your-api-key>`
+
 
 ## Usage
 
@@ -84,14 +92,6 @@ To set up the project locally, follow these steps:
 
    - Follow the on-screen instructions to perform various research tasks.
    - Use the command-line interface to input data and receive outputs.
-
-## Configuration (API-KEYS
-
-- You need to add API keys for both Tavily and OpenAI to a `.env` file in this repo
-- Ensure that your environment variables are set up correctly. You can configure them in a `.env` file,
-  which is ignored by version control as specified in the `.gitignore` file.
-1. Create a `.env` in `/CompanyResearcher/.env`
-2. In the file add on one line `TAVILY_API_KEY=<your-api-key>` and on another line `OPENAI_API_KEY=<your-api-key>`
 
 ## Contributing
 
