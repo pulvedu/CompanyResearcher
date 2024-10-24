@@ -145,6 +145,6 @@ class CompanyResearcher:
         open('company_researcher_diagram.png', 'wb').write(im.data)
 
 if __name__ == "__main__":
-    response = CompanyResearcher()
+    response = CompanyResearcher().run()
 
 
