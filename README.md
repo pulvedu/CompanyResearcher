@@ -13,21 +13,18 @@ of agents that work together to get the most accurate and comprehensive informat
 
 ### Summary of Agents
 
-TavilySearch: 
-        Conducts a general search using the Tavily API.
-AnalyzeSearch: 
-        Analyzes the search results and brings a human in the loop to
-        help determine if the search results are relevant to the company the user
-        is researching.
-TavilyFocusedSearch: 
-        Conducts a focused search using the Tavily API given the knownledge
-        gained from the AnalyzeSearch agent using human in the loop.
-TavilyExtract: 
-        Extracts raw content from the the search results returned by the TavilyFocusedSearch agent.
-GenerateFinalSummary: 
-        Generates a final summary of the findings.
-ConvertToPDF: 
-        Converts the final summary into a PDF document.
+- TavilySearch:
+        - Conducts a general search using the Tavily API.
+- AnalyzeSearch:
+        - Analyzes the search results and brings a human in the loop to help determine if the search results are relevant to the company the user is researching.
+- TavilyFocusedSearch:
+        - Conducts a focused search using the Tavily API given the knownledge gained from the AnalyzeSearch agent using human in the loop.
+- TavilyExtract:
+        - Extracts raw content from the the search results returned by the TavilyFocusedSearch agent.
+- GenerateFinalSummary: 
+        - Generates a final summary of the findings.
+- ConvertToPDF:
+        - Converts the final summary into a PDF document.
 
 ### LangGraph
 
